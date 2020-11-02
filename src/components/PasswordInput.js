@@ -10,7 +10,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components/macro';
 
-const PasswordLength = (PasswordInput) => {
+const getColor = (PasswordInput) => {
   if (PasswordInput.value.length > 10) {
     return 'green';
   }
@@ -24,7 +24,7 @@ const PasswordLength = (PasswordInput) => {
 };
 
 const Input = styled.input`
-  background: ${() => PasswordLength};
+  background: ${() => getColor};
 `;
 
 const PasswordInput = ({ value, onChange }) => {
